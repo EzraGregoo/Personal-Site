@@ -1,0 +1,237 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #082032;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+/* header */
+.toggler {
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+.toggler span {
+    position: absolute;
+    height: 0.1rem;
+    width: 1.3rem;
+    background-color: white;
+    border-radius: 20%;
+    transition: 750ms;
+}
+
+.toggler span.toggler__top {
+    transform: translateY(-0.45rem);
+    width: 0.975rem;
+    right: 0.7rem;
+}
+
+.toggler span.toggler__bot {
+    transform: translateY(0.45rem);
+    width: 1.1rem;
+    right: 0.575rem;
+}
+
+.toggler[aria-expanded="true"] span.toggler__mid {
+    transform: translateX(1.75rem);
+}
+
+.toggler[aria-expanded="true"] span.toggler__top {
+    width: 1.3rem;
+    transform: translateY(0) rotate(45deg);
+    right: unset;
+    transition-delay: 0.125s;
+}
+
+.toggler[aria-expanded="true"] span.toggler__bot {
+    width: 1.3rem;
+    transform: translateY(0) rotate(315deg);
+    right: unset;
+    transition-delay: 0.25s;
+}
+
+.cover {
+    z-index: 8990;
+    inset: 0 0 0 0;
+    position: fixed;
+    background-color: black;
+    opacity: 0.35;
+    display: none;
+}
+
+.cover[aria-expanded="true"] {
+    display: block;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    padding: 1rem 2rem 0.75rem;
+
+}
+
+nav.scrolled {
+    box-shadow: 0px 12px 6px -3px rgba(0,0,0,0.27);
+    -webkit-box-shadow: 0px 12px 6px -3px rgba(0,0,0,0.27);
+    -moz-box-shadow: 0px 12px 6px -3px rgba(0,0,0,0.27);
+    background-color: #082032;
+}
+
+.progress-bar{
+    height: 0.75px;
+    background-color: #FF4C29;
+    --progress: 0;
+    width: var(--progress);
+    position: sticky;
+    top: 3.75rem;
+    z-index: 8980;
+}
+
+.name {
+    color: white;
+    margin: 0;
+    font-weight: 500;
+    font-family:'Josefin Sans', sans-serif;
+    font-size: 1rem;
+}
+
+.nav {
+    font-size: 1.25rem;
+    z-index: 9000;
+    padding-top: 10em;
+    padding-left: 1.25em;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5em;
+    margin: 0;
+    inset: 0 0 0 40%;;
+    position: fixed;
+    background-color: #2C394B;
+    transform: translateX(100%);
+    transition: transform 350ms ease-out;
+}
+
+.nav[data-visibility="true"] {
+    transform: translateX(0%);
+    transition: transform 350ms ease-out;
+    box-shadow: -9px 0px 24px 2px rgba(0,0,0,0.4);
+    -webkit-box-shadow: -9px 0px 24px 2px rgba(0,0,0,0.4);
+    -moz-box-shadow: -9px 0px 24px 2px rgba(0,0,0,0.4);
+}
+
+.nav__link {
+    text-decoration: none;
+    color: white;
+}
+
+.list-number {
+    font-family: "Fira Code", monospace;
+    color: #FF4C29;
+    font-size: 0.75em;
+}
+
+.nav__socials {
+    margin-top: 1em;
+    display: flex;
+    gap: 1em;
+    justify-content: space-evenly;
+    font-size: 1.25em;
+    padding-right: 25px;
+}
+
+.nav__socials a {
+    color: #FF4C29;
+}
+
+
+.header {
+    display: flex;
+    flex-direction: column;
+    padding-top: 7rem;
+    gap: 2rem;
+    padding: 7rem 2rem 0 2rem;
+}
+
+.header h1, h2, h3 {
+    margin: 0;
+}
+
+.header h1 {
+    font-size: 3rem;
+    color: hsl(215, 48%, 83%);
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+}
+
+.header h2{
+    color: hsl(215, 48%, 63%);
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    font-size: 1.75rem;
+}
+
+.paragraph-content {
+    color: hsl(215, 48%, 63%);
+    line-height: 1.75rem;
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.links {
+    color: hsl(215, 48%, 63%);
+}
+
+.header strong {
+    color: #FF4C29;
+}
+
+.contact-me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10em;
+    background-color: #FF4C29;
+    border-color: white;
+    border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
+    margin-top: 3rem;
+}
+
+.contact-me a {
+    text-decoration: none;
+    color: white;
+    padding: 0.75em 1.5em;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* main */
+main{
+    margin: 7rem 0;
+    padding: 0 2rem;
+}
+
+main .paragraph-content {
+    text-align: justify;
+    text-indent: 1.25em;
+}
+
+.main__header h2 {
+    font-family:'Josefin Sans', sans-serif;
+    color:hsl(215, 48%, 63%);
+    font-weight: 300;
+    font-size: 1.75rem;
+}
