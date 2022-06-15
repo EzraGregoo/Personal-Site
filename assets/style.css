@@ -7,6 +7,10 @@ body {
 }
 
 /* header */
+header{
+    height: 100vh;
+}
+
 .toggler {
     position: relative;
     width: 2rem;
@@ -220,7 +224,7 @@ nav.scrolled {
 
 /* main */
 main{
-    margin: 7rem 0;
+    margin: 3rem 0;
     padding: 0 2rem;
 }
 
@@ -229,9 +233,17 @@ main .paragraph-content {
     text-indent: 1.25em;
 }
 
+main .links {
+    color: #FF4C29;
+}
+
 .main__header h2 {
     font-family:'Josefin Sans', sans-serif;
     color:hsl(215, 48%, 63%);
     font-weight: 300;
     font-size: 1.75rem;
+}
+
+.paragraph-content b {
+    font-weight: 500;
 }
