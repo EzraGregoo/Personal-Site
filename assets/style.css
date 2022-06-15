@@ -244,6 +244,10 @@ main .links {
     font-size: 1.75rem;
 }
 
+#about {
+    height: 100vh;
+}
+
 .paragraph-content b {
     font-weight: 500;
 }
