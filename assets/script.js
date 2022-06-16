@@ -50,3 +50,34 @@ document.addEventListener('scroll', () => {
         progressBar.style.setProperty("--progress", progress)
     }
 });
+
+let separator = document.querySelectorAll(".separator");
+let mainHeader = document.querySelectorAll(".main__header");
+let mainTitle = document.querySelectorAll(".header__title");
+
+separator = Array.from(separator);
+mainHeader = Array.from(mainHeader);
+mainTitle = Array.from(mainTitle);
+
+const mainHeaderWidth = [];
+for(x of mainHeader) {
+    const width = x.clientWidth;
+    mainHeaderWidth.push(width);
+}
+
+const mainTitleWidth = [];
+for (x of mainTitle) {
+    const width = x.clientWidth;
+    mainTitleWidth.push(width);
+}
+
+for (let i = 0; i < separator.length; i++) { 
+    let separatorWidth = 360 - mainTitleWidth[i] - 20;
+    separatorWidth = separatorWidth.toString() + "px"
+    separator[i].style.setProperty("--width", separatorWidth);
+}
+
+console.log(document.querySelector(".nav__link"))
+
+
+
