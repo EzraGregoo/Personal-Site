@@ -64,7 +64,7 @@ header {
 }
 
 .cover {
-    z-index: 8990;
+    z-index: 8980;
     inset: 0 0 0 0;
     position: fixed;
     background-color: black;
@@ -83,14 +83,15 @@ nav {
     position: sticky;
     top: 0;
     padding: 1rem 2rem 0.75rem;
-
 }
 
 nav.scrolled {
     box-shadow: 0px 12px 6px -3px rgba(0,0,0,0.27);
-    -webkit-box-shadow: 0px 12px 6px -3px rgba(0,0,0,0.27);
-    -moz-box-shadow: 0px 12px 6px -3px rgba(0,0,0,0.27);
     background-color: #082032;
+}
+
+nav, .progress-bar {
+    z-index: 8990;
 }
 
 .progress-bar{
@@ -100,7 +101,6 @@ nav.scrolled {
     width: var(--progress);
     position: sticky;
     top: 3.75rem;
-    z-index: 8980;
 }
 
 .name {
@@ -132,8 +132,6 @@ nav.scrolled {
     transform: translateX(0%);
     transition: transform 350ms ease-out;
     box-shadow: -9px 0px 24px 2px rgba(0,0,0,0.4);
-    -webkit-box-shadow: -9px 0px 24px 2px rgba(0,0,0,0.4);
-    -moz-box-shadow: -9px 0px 24px 2px rgba(0,0,0,0.4);
 }
 
 .nav__link {
@@ -238,7 +236,7 @@ main{
 }
 
 #about, #project {
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 .content-container {
@@ -290,6 +288,10 @@ main .links {
 }
 
 .project__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
     width: 300px;
     height: 300px;
     border-radius: 3px;
@@ -299,17 +301,42 @@ main .links {
     border-width: 1px;
     border-color: white;
     background-color:white;
+    box-shadow: 0px 7.5px 5px rgba(0,0,0,0.27);
 }
 
+.card__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    color: white;
+}
+
+.card__content h3 {
+    font-family:'Josefin Sans', sans-serif;
+    font-size: larger;
+    text-align: center;
+    text-shadow: 3px 3px 5px #082032;
+}
+
+.card__content p {
+    text-align: center;
+    color:white;
+}
+
+.card__content a {
+    color: white;
+    font-weight: 600;
+}
 
 .qrcode {
-    background-image:linear-gradient(to bottom, rgba(250,248,248,0.5),rgba(255,76,41,0.9)), url("images/qrcode.png");
+    background-image:linear-gradient(to bottom, hsla(0, 17%, 58%, 0.5),hsla(10, 100%, 38%, 0.9)), url("images/qrcode.png");
 }
 
 .intro {
-    background-image:linear-gradient(to bottom, rgba(250,248,248,0.5),rgba(255,76,41,0.9)), url("images/intro.png");
+    background-image:linear-gradient(to bottom, hsla(0, 17%, 58%, 0.5),hsla(10, 100%, 38%, 0.9)), url("images/intro.png");
 }
 
 .testimonials {
-    background-image:linear-gradient(to bottom, rgba(250,248,248,0.5),rgba(255,76,41,0.9)), url("images/testimonials.png");
+    background-image:linear-gradient(to bottom, hsla(0, 17%, 58%, 0.5),hsla(10, 100%, 38%, 0.9)), url("images/testimonials.png");
 }
