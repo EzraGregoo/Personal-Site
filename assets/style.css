@@ -70,6 +70,7 @@ header {
     background-color: black;
     opacity: 0.35;
     display: none;
+    top: 0;
 }
 
 .cover[aria-expanded="true"] {
@@ -123,6 +124,7 @@ nav, .progress-bar {
     margin: 0;
     inset: 0 0 0 40%;;
     position: fixed;
+    right: 0;
     background-color: #2C394B;
     transform: translateX(100%);
     transition: transform 350ms ease-out;
@@ -235,7 +237,11 @@ main{
     justify-content: space-between;
 }
 
-#about, #project {
+#about{
+    margin-top: 0;
+}
+
+#project {
     margin-top: 20px;
 }
 
@@ -339,4 +345,27 @@ main .links {
 
 .testimonials {
     background-image:linear-gradient(to bottom, hsla(0, 17%, 58%, 0.5),hsla(10, 100%, 38%, 0.9)), url("images/testimonials.png");
+}
+
+aside .main__header {
+    flex-direction: column;
+}
+
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+aside section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table {
+    text-align: left;
+    color:hsl(215, 48%, 63%);
+    border-collapse: separate;
+    border-spacing: 0.75em;
 }
