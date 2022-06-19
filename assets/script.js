@@ -11,6 +11,7 @@ let progress = null;
 toggler.addEventListener("click", () => {
     const ariaExpanded = toggler.getAttribute("aria-expanded")
     if (ariaExpanded == "false") {
+        document.body.classList.add("stop-scroll");
         toggler.setAttribute("aria-expanded", true)
         navMenu.setAttribute("data-visibility", true)
         cover.setAttribute("aria-expanded", true)
@@ -18,6 +19,7 @@ toggler.addEventListener("click", () => {
             progressBar.style.setProperty("--progress", "40%")
         }
     } else {
+        document.body.classList.remove("stop-scroll");
         toggler.setAttribute("aria-expanded", false)
         navMenu.setAttribute("data-visibility", false)
         cover.setAttribute("aria-expanded", false)
@@ -36,6 +38,7 @@ window.onscroll = function() {
 };
 
 document.addEventListener('scroll', () => {
+    document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
     const ariaExpanded = toggler.getAttribute("aria-expanded");
     const {scrollTop, scrollHeight} = document.documentElement;
     scrollPercent = (scrollTop / (scrollHeight - window.innerHeight))*100;
@@ -76,8 +79,4 @@ for (let i = 0; i < separator.length; i++) {
     separatorWidth = separatorWidth.toString() + "px"
     separator[i].style.setProperty("--width", separatorWidth);
 }
-
-console.log(document.querySelector(".nav__link"))
-
-
 

@@ -6,6 +6,11 @@ html, body {
     box-sizing: border-box;
 }
 
+.stop-scroll {
+    height: 100%;
+    overflow: hidden;
+}
+
 /* header */
 header {
     display: inline;
