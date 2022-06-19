@@ -1,168 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/style.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Josefin+Sans:wght@400;700&family=Montserrat:wght@200;300;400&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/style.css" />
 
-    <script
-      src="https://kit.fontawesome.com/0fb8cd6d55.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="assets/script.js" defer></script>
-    <title>Tugas Akhir Membuat Web</title>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <h1 class="name">EZRAGREGOO</h1>
-        <div class="toggler" aria-controls="nav" aria-expanded="false">
-          <span class="toggler__top"></span>
-          <span class="toggler__mid"></span>
-          <span class="toggler__bot"></span>
-        </div>
-        <div class="cover" aria-expanded="false"></div>
-        <ul id="nav" class="nav" data-visibility="false">
-          <li>
-            <a class="nav__link" href="#about-nav"
-              ><span class="list-number">01.</span> About</a
-            >
-          </li>
-          <li>
-            <a class="nav__link" href="#project-nav"
-              ><span class="list-number">02.</span> Project</a
-            >
-          </li>
-          <li>
-            <a class="nav__link" href=""
-              ><span class="list-number">03.</span> Contact</a
-            >
-          </li>
-          <li class="nav__socials">
-            <a href="https://www.instagram.com/ezragregoo/"
-              ><i class="fa-brands fa-instagram"></i
-            ></a>
-            <a href="https://twitter.com/ezragregoo"
-              ><i class="fa-brands fa-twitter"></i
-            ></a>
-            <a href="https://github.com/EzraGregoo"
-              ><i class="fa-brands fa-github"></i
-            ></a>
-          </li>
-        </ul>
-      </nav>
-      <div class="progress-bar"></div>
-      <div class="header">
-        <h1>Hi, I'm <strong>Ezra</strong>!</h1>
-        <h2>I build the face of the web.</h2>
-        <h3 class="paragraph-content">
-          I am a self-taught Front-End Developer based in
-          <a href="https://goo.gl/maps/bPsVVYTZhGWZfyXP7" class="links"
-            >Ambon, Indonesia.</a
-          >
-        </h3>
-        <button class="contact-me">
-          <a href="">Contact me</a>
-        </button>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Josefin+Sans:wght@400;700&family=Montserrat:wght@200;300;400&display=swap"
+    rel="stylesheet" />
+
+  <script src="https://kit.fontawesome.com/0fb8cd6d55.js" crossorigin="anonymous"></script>
+  <script src="assets/script.js" defer></script>
+  <title>Tugas Akhir Membuat Web</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <h1 class="name">EZRAGREGOO</h1>
+      <div class="toggler" aria-controls="nav" aria-expanded="false">
+        <span class="toggler__top"></span>
+        <span class="toggler__mid"></span>
+        <span class="toggler__bot"></span>
       </div>
-    </header>
-    <main>
-      <div class="main">
-        <article id="about" class="content-container">
-          <header class="main__header">
-            <h2 id="about-nav" class="header__title">
-              <span class="list-number">01.</span> About me
-            </h2>
-            <span class="separator"></span>
-          </header>  
-          <div class="main__content">
-            <p class="paragraph-content">
-              My name is <b>Ezra Gregoreo Noya</b>. I am 18 years old and I'm
-              seeking for career opportunity in Front-End Web Development.
-            </p>
-            <p class="paragraph-content">
-              As a self-taught learner and developer, I started with learning
-              the basics, which are HTML, CSS, and Javascript. I also try to
-              make practice projects, which you can see
-              <a href="" class="links">below</a>.
-            </p>
-            <p class="paragraph-content">
-              For the next step, I'm interested to learn new tools that will
-              make my work more efficient, such as React, SASS, and other cool
-              stuff. Moreover, I'm interested to create more cool projects.
-              <b
-                >So if you have any idea, feel free to
-                <a href="" class="links">hit me up</a> ^^!</b
-              >
-            </p>
-          </div>
-        </article>
-        <article id="project">
-          <header class="main__header">
-            <h2 class="header__title">
-              <span class="list-number">02.</span> Practice Projects
-            </h2>
-            <span class="separator"></span>
-          </header>
-          <div class="main__content">
-            <section class="project__card qrcode">
-                <div class="card__content">
-                  <h3>QR Code Component</h3>
-                  <p>A start-up project when i learned the basics of HTML and CSS. Click <a href="https://ezragregoo.github.io/qr-code-component-main/" class="links">here</a> to see more!</p>
-                </div>
-            </section>
-            <section class="project__card testimonials">
-              <div class="card__content">
-                <h3>Testimonials Grid Section</h3>
-                <p>Basic project to practice css responsive layout using grid. Click <a href="https://ezragregoo.github.io/testimonials-grid-section-main/" class="links">here</a> to see more!</p>
-              </d>
-            </section>
-            <section class="project__card intro">
-              <div class="card__content">
-                <h3>Landing Page with Dropdowns</h3>
-                <p>More complex project with Javascript to add dropdown menu and responsive navbar. Click <a href="https://ezragregoo.github.io/intro-section-with-dropdown-navigation-main/" class="links">here</a> to see more!</p>
-              </div>
-            </section>
-          </div>
-        </article>
-      </div>
-      <aside>
+      <div class="cover" aria-expanded="false"></div>
+      <ul id="nav" class="nav" data-visibility="false">
+        <li>
+          <a class="nav__link" href="#about-nav"><span class="list-number">01.</span> About</a>
+        </li>
+        <li>
+          <a class="nav__link" href="#project-nav"><span class="list-number">02.</span> Project</a>
+        </li>
+        <li>
+          <a class="nav__link" href=""><span class="list-number">03.</span> Contact</a>
+        </li>
+        <li class="nav__socials">
+          <a href="https://www.instagram.com/ezragregoo/"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://twitter.com/ezragregoo"><i class="fa-brands fa-twitter"></i></a>
+          <a href="https://github.com/EzraGregoo"><i class="fa-brands fa-github"></i></a>
+        </li>
+      </ul>
+    </nav>
+    <div class="progress-bar"></div>
+    <div class="header">
+      <h1>Hi, I'm <strong>Ezra</strong>!</h1>
+      <h2>I build the face of the web.</h2>
+      <h3 class="paragraph-content">
+        I am a self-taught Front-End Developer based in
+        <a href="https://goo.gl/maps/bPsVVYTZhGWZfyXP7" class="links">Ambon, Indonesia.</a>
+      </h3>
+      <button class="contact-me">
+        <a href="">Contact me</a>
+      </button>
+    </div>
+  </header>
+  <main>
+    <div class="main">
+      <article id="about" class="content-container">
         <header class="main__header">
-          <h2 class="header__title">Biodata</h2>
-          <figure>
-            <img src="assets/images/self.jpg" class="profile-pic" alt="a pic of myself">
-          </figure>
+          <h2 id="about-nav" class="header__title">
+            <span class="list-number">01.</span> About me
+          </h2>
+          <span class="separator"></span>
         </header>
-        <section>
-          <table>
-            <tr>
-              <th>Full Name</th>
-              <td>Ezra Gregoreo Noya</td>
-            </tr>
-            <tr>
-              <th>Birthday</th>
-              <td>13 December 2003</td>
-            </tr>
-            <tr>
-              <th>Birthplace</th>
-              <td>Ambon, Maluku, Indonesia</td>
-            </tr>
-            <tr>
-              <th>Hobbies</th>
-              <td>📖 💪🏽 💻</td>
-            </tr>
-          </table>
+        <section class="main__content">
+          <p class="paragraph-content">
+            My name is <b>Ezra Gregoreo Noya</b>. I am 18 years old and I'm
+            seeking for career opportunity in Front-End Web Development.
+          </p>
+          <p class="paragraph-content">
+            As a self-taught learner and developer, I started with learning
+            the basics, which are HTML, CSS, and Javascript. I also try to
+            make practice projects, which you can see
+            <a href="" class="links">below</a>.
+          </p>
+          <p class="paragraph-content">
+            For the next step, I'm interested to learn new tools that will
+            make my work more efficient, such as React, SASS, and other cool
+            stuff. Moreover, I'm interested to create more cool projects.
+            <b>So if you have any idea, feel free to
+              <a href="" class="links">hit me up</a> ^^!</b>
+          </p>
         </section>
-      </aside>
-    </main>
-    <footer></footer>
-  </body>
+      </article>
+      <article id="project">
+        <header class="main__header">
+          <h2 class="header__title">
+            <span class="list-number">02.</span> Practice Projects
+          </h2>
+          <span class="separator"></span>
+        </header>
+        <div class="main__content">
+          <section class="project__card qrcode">
+            <div class="card__content">
+              <h3>QR Code Component</h3>
+              <p>A start-up project when i learned the basics of HTML and CSS. Click <a
+                  href="https://ezragregoo.github.io/qr-code-component-main/" class="links">here</a> to see more!</p>
+            </div>
+          </section>
+          <section class="project__card testimonials">
+            <div class="card__content">
+              <h3>Testimonials Grid Section</h3>
+              <p>Basic project to practice css responsive layout using grid. Click <a
+                  href="https://ezragregoo.github.io/testimonials-grid-section-main/" class="links">here</a> to see
+                more!</p>
+              </d>
+          </section>
+          <section class="project__card intro">
+            <div class="card__content">
+              <h3>Landing Page with Dropdowns</h3>
+              <p>More complex project with Javascript to add dropdown menu and responsive navbar. Click <a
+                  href="https://ezragregoo.github.io/intro-section-with-dropdown-navigation-main/"
+                  class="links">here</a> to see more!</p>
+            </div>
+          </section>
+        </div>
+      </article>
+      <article id="contact">
+        <header class="main__header">
+          <h2 class="header__title"><span class="list-number">03. </span>Contact</h1>
+        </header>
+        <section class="main__content">
+          <p class="paragraph-content">Want to work together or have any questions? Let's get in touch!</p>
+          <button class="contact-me">
+            <a href="">Contact me</a>
+          </button>
+        </section>
+      </article>
+    </div>
+    <aside>
+      <header class="main__header">
+        <h2 class="header__title">Biodata</h2>
+        <figure>
+          <img src="assets/images/self.jpg" class="profile-pic" alt="a pic of myself">
+        </figure>
+      </header>
+      <section>
+        <table>
+          <tr>
+            <th>Full Name</th>
+            <td>Ezra Gregoreo Noya</td>
+          </tr>
+          <tr>
+            <th>Birthday</th>
+            <td>13 December 2003</td>
+          </tr>
+          <tr>
+            <th>Birthplace</th>
+            <td>Ambon, Maluku, Indonesia</td>
+          </tr>
+          <tr>
+            <th>Hobbies</th>
+            <td>📖 💪🏽 💻</td>
+          </tr>
+        </table>
+      </section>
+    </aside>
+  </main>
+  <footer>
+    <section class="main__content">
+      <div class="socials">
+        <a href="https://www.instagram.com/ezragregoo/"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://twitter.com/ezragregoo"><i class="fa-brands fa-twitter"></i></a>
+        <a href="https://github.com/EzraGregoo"><i class="fa-brands fa-github"></i></a>
+      </div>
+      <p class="paragraph-content">
+        designed & built by Ezragregoo
+      </p>
+    </section>
+  </footer>
+</body>
 </html>

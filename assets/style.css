@@ -369,3 +369,45 @@ table {
     border-collapse: separate;
     border-spacing: 0.75em;
 }
+
+#contact, #contact .main__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact p {
+    text-align: center;
+}
+
+#contact .contact-me {
+    margin-top: 1rem;
+}
+
+/* footer */
+footer {
+    margin: 70px auto 30px;
+}
+
+footer .main__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Fira Code", monospace;
+}
+
+.socials {
+    display: flex;
+    gap: 1em;
+    font-size: 1.25rem;
+}
+
+.socials a{
+    color:hsl(215, 48%, 63%);
+}
+
+footer .main__content p {
+    font-size: 0.8rem;
+}
+
+ 
