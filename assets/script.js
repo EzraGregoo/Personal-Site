@@ -5,29 +5,37 @@ const navMenu = document.querySelector(".nav");
 const cover = document.querySelector(".cover");
 const navBar = document.querySelector("nav");
 const progressBar = document.querySelector(".progress-bar");
+const aboutNav = document.querySelector(".about");
+const projectNav = document.querySelector(".project");
+const contactNav = document.querySelector(".contact");
 let scrollPercent = null;
 let progress = null;
 
-toggler.addEventListener("click", () => {
-    const ariaExpanded = toggler.getAttribute("aria-expanded")
-    if (ariaExpanded == "false") {
-        document.body.classList.add("stop-scroll");
-        toggler.setAttribute("aria-expanded", true)
-        navMenu.setAttribute("data-visibility", true)
-        cover.setAttribute("aria-expanded", true)
-        if(scrollPercent > 40) {
-            progressBar.style.setProperty("--progress", "40%")
-        }
-    } else {
-        document.body.classList.remove("stop-scroll");
+toggler.addEventListener("click", navControl);
+aboutNav.addEventListener("click", navControl);
+projectNav.addEventListener("click", navControl);
+contactNav.addEventListener("click", navControl);
+
+function navControl() {
+    const ariaExpanded = toggler.getAttribute("aria-expanded");
+    if (ariaExpanded == "true") {
         toggler.setAttribute("aria-expanded", false)
-        navMenu.setAttribute("data-visibility", false)
-        cover.setAttribute("aria-expanded", false)
+        document.body.classList.remove("stop-scroll");
+        navMenu.setAttribute("data-visibility", false);
+        cover.setAttribute("aria-expanded", false);
         if(scrollPercent > 40) {
             progressBar.style.setProperty("--progress", progress)
         }
+    } else {
+        toggler.setAttribute("aria-expanded", true)
+        document.body.classList.add("stop-scroll"); 
+        navMenu.setAttribute("data-visibility", true);
+        cover.setAttribute("aria-expanded", true);
+        if(scrollPercent > 40) {
+            progressBar.style.setProperty("--progress", "40%")
+        }
     }
-});
+}
 
 window.onscroll = function() {
     if(window.scrollY > 22){
@@ -79,4 +87,5 @@ for (let i = 0; i < separator.length; i++) {
     separatorWidth = separatorWidth.toString() + "px"
     separator[i].style.setProperty("--width", separatorWidth);
 }
+
 

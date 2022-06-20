@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -235,19 +239,14 @@ main{
 }
 
 .main {
-    margin-top: 7rem;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
     justify-content: space-between;
 }
 
-#about{
-    margin-top: 0;
-}
-
-#project {
-    margin-top: 20px;
+.nav-aim {
+    height: 77.5px;
+    width: 100%;
 }
 
 .content-container {
@@ -373,6 +372,10 @@ table {
     color:hsl(215, 48%, 63%);
     border-collapse: separate;
     border-spacing: 0.75em;
+}
+
+#contact {
+    margin-top: 70px;
 }
 
 #contact, #contact .main__content {
