@@ -1,30 +1,8 @@
-console.log("Holla!")
-
+// kumpulan fungsi untuk membuka/menutup navbar saat dalam versi mobile
 const toggler = document.querySelector(".toggler");
 const navMenu = document.querySelector(".nav");
 const cover = document.querySelector(".cover");
 const navBar = document.querySelector("nav");
-const progressBar = document.querySelector(".progress-bar");
-let navLink = document.querySelectorAll(".nav__link");
-let windowWidth = window.innerWidth;
-let scrollPercent = null;
-let progress = null;
-
-toggler.addEventListener("click", navControl);
-
-navLink = Array.from(navLink);
-for (x of navLink) {
-    x.addEventListener("click", () => {
-        let windowWidth = window.innerWidth;
-        if (windowWidth <= 640) {
-            navControl();
-        }
-    });
-}
-
-window.onresize = function() {
-    windowWidth = window.innerWidth;
-}
 
 function navControl() {
     const ariaExpanded = toggler.getAttribute("aria-expanded");
@@ -47,6 +25,26 @@ function navControl() {
     }
 }
 
+toggler.addEventListener("click", navControl);
+
+let navLink = document.querySelectorAll(".nav__link")
+navLink = Array.from(navLink);
+for (x of navLink) {
+    x.addEventListener("click", () => {
+        let windowWidth = window.innerWidth;
+        if (windowWidth <= 640) {
+            navControl();
+        }
+    });
+}
+
+// mencatat luas viewport saat resize
+let windowWidth = window.innerWidth;
+window.onresize = function() {
+    windowWidth = window.innerWidth;
+}
+
+// menambahkan efek shadow pada navbar saat scroll
 window.onscroll = function() {
     if(window.scrollY > 22){
         navBar.classList.add("scrolled")
@@ -55,6 +53,10 @@ window.onscroll = function() {
     }   
 };
 
+// menambahkan progress bar di bawah navbar saat scroll
+const progressBar = document.querySelector(".progress-bar");
+let scrollPercent = null;
+let progress = null;
 document.addEventListener('scroll', () => {
     document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
     const ariaExpanded = toggler.getAttribute("aria-expanded");
