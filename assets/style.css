@@ -130,7 +130,7 @@ nav, .progress-bar {
     flex-direction: column;
     gap: 5em;
     margin: 0;
-    inset: 0 0 0 40%;;
+    inset: 0 0 0 40%;
     position: fixed;
     background-color: #2C394B;
     transform: translateX(100%);
@@ -177,7 +177,7 @@ nav, .progress-bar {
     padding: 7rem 2rem 0 2rem;
 }
 
-.header h1, h2, h3 {
+ h1, h2, h3 {
     margin: 0;
 }
 
@@ -245,6 +245,9 @@ main{
 }
 
 .nav-aim {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 77.5px;
     width: 100%;
 }
@@ -266,8 +269,9 @@ main .links {
 
 .main__header {
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 0.75rem;
+    gap: 1.5rem;
 }
 
 .main__header h2 {
@@ -278,9 +282,8 @@ main .links {
 }
 
 .separator {
-    --width: 20px;
-    height: 1.25px;
-    width: var(--width);
+    height: 0.75px;
+    width: 100%;
     background-color: hsl(215, 48%, 30%);  
 }
 
@@ -374,10 +377,6 @@ table {
     border-spacing: 0.75em;
 }
 
-#contact {
-    margin-top: 70px;
-}
-
 #contact, #contact .main__content {
     display: flex;
     flex-direction: column;
@@ -416,6 +415,70 @@ footer .main__content {
 
 footer .main__content p {
     font-size: 0.8rem;
+}
+
+/* media queries */
+@media screen and (min-width: 641px) {
+    /* header */
+    nav {
+        gap: 1rem;
+        padding: 1.3rem 2rem 1rem;
+    }
+    .name {
+        margin: 0;
+        font-weight: 500;
+        font-family:'Josefin Sans', sans-serif;
+        font-size: 1.25rem;
+    }
+
+    .toggler{
+        display: none;
+    }
+
+    .nav {
+        transform: unset;
+        padding: initial;
+        flex-direction: row;
+        inset: unset;
+        position: static;
+        background-color: transparent;
+        z-index: 8990;
+        font-size: 1em; 
+        justify-content: space-between;
+        gap: 2em;
+    }
+
+    .nav__link {
+        display: flex;
+        align-items: baseline;
+        gap: 0.5em;
+        justify-content: space-between;
+    }
+
+    .nav__socials {
+        display: none;
+    }
+
+    .progress-bar {
+        top: 3.6rem;
+    }
+
+    .header h1 {
+        font-size: 4.5rem;
+    }  
+
+    .header h2 {
+        font-size: 2.5rem;
+    }
+
+    .paragraph-content {
+        font-size: 1.25rem;
+    }
+
+    /* main */
+    .main__header h2{
+        font-size: 2.5rem;
+    }
 }
 
  

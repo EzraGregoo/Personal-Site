@@ -5,16 +5,26 @@ const navMenu = document.querySelector(".nav");
 const cover = document.querySelector(".cover");
 const navBar = document.querySelector("nav");
 const progressBar = document.querySelector(".progress-bar");
-const aboutNav = document.querySelector(".about");
-const projectNav = document.querySelector(".project");
-const contactNav = document.querySelector(".contact");
+let navLink = document.querySelectorAll(".nav__link");
+let windowWidth = window.innerWidth;
 let scrollPercent = null;
 let progress = null;
 
 toggler.addEventListener("click", navControl);
-aboutNav.addEventListener("click", navControl);
-projectNav.addEventListener("click", navControl);
-contactNav.addEventListener("click", navControl);
+
+navLink = Array.from(navLink);
+for (x of navLink) {
+    x.addEventListener("click", () => {
+        let windowWidth = window.innerWidth;
+        if (windowWidth <= 640) {
+            navControl();
+        }
+    });
+}
+
+window.onresize = function() {
+    windowWidth = window.innerWidth;
+}
 
 function navControl() {
     const ariaExpanded = toggler.getAttribute("aria-expanded");
@@ -61,31 +71,3 @@ document.addEventListener('scroll', () => {
         progressBar.style.setProperty("--progress", progress)
     }
 });
-
-let separator = document.querySelectorAll(".separator");
-let mainHeader = document.querySelectorAll(".main__header");
-let mainTitle = document.querySelectorAll(".header__title");
-
-separator = Array.from(separator);
-mainHeader = Array.from(mainHeader);
-mainTitle = Array.from(mainTitle);
-
-const mainHeaderWidth = [];
-for(x of mainHeader) {
-    const width = x.clientWidth;
-    mainHeaderWidth.push(width);
-}
-
-const mainTitleWidth = [];
-for (x of mainTitle) {
-    const width = x.clientWidth;
-    mainTitleWidth.push(width);
-}
-
-for (let i = 0; i < separator.length; i++) { 
-    let separatorWidth = 360 - mainTitleWidth[i] - 20;
-    separatorWidth = separatorWidth.toString() + "px"
-    separator[i].style.setProperty("--width", separatorWidth);
-}
-
-
