@@ -22,6 +22,16 @@ function navControl() {
         if(scrollPercent > 40) {
             progressBar.style.setProperty("--progress", "40%")
         }
+        window.addEventListener("resize", function(){
+            windowWidth = window.innerWidth;
+            if(windowWidth>640){
+                toggler.setAttribute("aria-expanded", false);
+                document.body.classList.remove("stop-scroll");
+                navMenu.setAttribute("data-visibility", false);
+                cover.setAttribute("aria-expanded", false);
+                scrollPercent=(scrollTop / (scrollHeight - window.innerHeight))*100;
+            }
+        })
     }
 }
 
@@ -31,18 +41,15 @@ let navLink = document.querySelectorAll(".nav__link")
 navLink = Array.from(navLink);
 for (x of navLink) {
     x.addEventListener("click", () => {
-        let windowWidth = window.innerWidth;
         if (windowWidth <= 640) {
-            navControl();
+         navControl();   
         }
     });
 }
 
 // mencatat luas viewport saat resize
 let windowWidth = window.innerWidth;
-window.onresize = function() {
-    windowWidth = window.innerWidth;
-}
+
 
 // menambahkan efek shadow pada navbar saat scroll
 window.onscroll = function() {
