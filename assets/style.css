@@ -357,6 +357,10 @@ main .links {
     background-image:linear-gradient(to bottom, hsla(0, 17%, 58%, 0.5),hsla(10, 100%, 38%, 0.9)), url("images/testimonials.png");
 }
 
+.bookshelf {
+    background-image:linear-gradient(to bottom, hsla(0, 17%, 58%, 0.5),hsla(10, 100%, 38%, 0.9)), url("images/bookshelf.png");
+}
+
 aside .main__header {
     flex-direction: column;
 }
@@ -482,6 +486,15 @@ footer .main__content p {
     .main__header h2{
         font-size: 2.5rem;
     }
+
+    #project .main__content{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .project__card{
+        flex-grow: 1;
+    }
 }
 
 @media (min-width: 1008px) {
@@ -501,7 +514,12 @@ footer .main__content p {
     }
 
     #project .main__content {
-        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .project__card {
+        flex: 100%;
+        flex-grow: 0;
     }
 
     main {
