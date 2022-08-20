@@ -490,10 +490,11 @@ footer .main__content p {
     #project .main__content{
         flex-direction: row;
         flex-wrap: wrap;
+        justify-content: center;
     }
 
     .project__card{
-        flex-grow: 1;
+        flex: 0.25 1 300px;
     }
 }
 
@@ -519,7 +520,6 @@ footer .main__content p {
 
     .project__card {
         flex: 100%;
-        flex-grow: 0;
     }
 
     main {
