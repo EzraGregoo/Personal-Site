@@ -345,8 +345,8 @@ main .links {
     font-weight: 600;
 }
 
-.qrcode {
-    background-image:linear-gradient(to bottom, hsla(0, 17%, 58%, 0.5),hsla(10, 100%, 38%, 0.9)), url("images/qrcode.png");
+.advice {
+    background-image:linear-gradient(to bottom, hsla(0, 17%, 58%, 0.5),hsla(10, 100%, 38%, 0.9)), url("images/advice.png");
 }
 
 .intro {
